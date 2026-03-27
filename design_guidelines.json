@@ -1,0 +1,115 @@
+{
+  "project_name": "PhD Compass",
+  "archetype": "Organic & Earthy / Minimalist Utility",
+  "theme": "Light mode default, deep charcoal dark mode",
+  "typography": {
+    "font_family": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    "hierarchy": {
+      "h1": "text-[22px] font-semibold leading-tight tracking-tight",
+      "h2": "text-[20px] font-semibold leading-snug tracking-tight",
+      "h3": "text-[18px] font-semibold leading-snug",
+      "body": "text-[16px] leading-[1.6] font-normal",
+      "small": "text-[14px] leading-normal font-medium",
+      "tiny": "text-[12px] leading-normal font-medium uppercase tracking-wider"
+    }
+  },
+  "colors": {
+    "light": {
+      "primary": "#1A8A7D",
+      "primary_hover": "#146F64",
+      "text_main": "#2D2D2A",
+      "text_muted": "#6B6B66",
+      "background": "#FAFAF8",
+      "card_surface": "#FFFFFF",
+      "border": "#E8E5DD",
+      "accent_warning": "#C4820B"
+    },
+    "dark": {
+      "primary": "#1A8A7D",
+      "primary_hover": "#20A596",
+      "text_main": "#F0F0F0",
+      "text_muted": "#A0A09F",
+      "background": "#1A1A1A",
+      "card_surface": "#2A2A2A",
+      "border": "#3A3A3A",
+      "accent_warning": "#DCA543"
+    },
+    "pillars": {
+      "P0": "#1A8A7D",
+      "P1": "#E06D63",
+      "P2": "#4A7A9B",
+      "P3": "#8B6B9E",
+      "P4": "#C4820B",
+      "P5": "#5B8C5A"
+    }
+  },
+  "spacing_and_layout": {
+    "mobile_first": true,
+    "bottom_nav_height": "56px",
+    "touch_target_min": "44px",
+    "container_padding": "px-4 py-6",
+    "safe_area_bottom": "pb-[80px]",
+    "gap": {
+      "tight": "gap-2",
+      "base": "gap-4",
+      "loose": "gap-6",
+      "section": "gap-8"
+    }
+  },
+  "components": {
+    "card": {
+      "classes": "bg-[#FFFFFF] dark:bg-[#2A2A2A] border border-[#E8E5DD] dark:border-[#3A3A3A] rounded-[12px] p-4 shadow-sm",
+      "notes": "Surface cards use 12px border radius. No heavy shadows."
+    },
+    "button_primary": {
+      "classes": "bg-[#1A8A7D] text-[#FAFAF8] rounded-[8px] min-h-[44px] px-4 py-2 font-medium flex items-center justify-center transition-colors hover:bg-[#146F64] dark:hover:bg-[#20A596]",
+      "notes": "8px border radius. Minimum 44px height for touch targets."
+    },
+    "button_secondary": {
+      "classes": "bg-transparent text-[#2D2D2A] dark:text-[#F0F0F0] border border-[#E8E5DD] dark:border-[#3A3A3A] rounded-[8px] min-h-[44px] px-4 py-2 font-medium flex items-center justify-center transition-colors hover:bg-[#FAFAF8] dark:hover:bg-[#1A1A1A]"
+    },
+    "input": {
+      "classes": "w-full bg-[#FFFFFF] dark:bg-[#2A2A2A] border border-[#E8E5DD] dark:border-[#3A3A3A] rounded-[8px] min-h-[44px] px-3 py-2 text-[16px] text-[#2D2D2A] dark:text-[#F0F0F0] placeholder-[#6B6B66] dark:placeholder-[#A0A09F] focus:outline-none focus:ring-1 focus:ring-[#1A8A7D]",
+      "notes": "16px text prevents iOS zoom on focus. 8px border radius."
+    },
+    "bottom_nav": {
+      "container_classes": "fixed bottom-0 left-0 right-0 h-[56px] bg-[#FAFAF8] dark:bg-[#1A1A1A] border-t border-[#E8E5DD] dark:border-[#3A3A3A] flex justify-around items-center z-50",
+      "item_active": "text-[#1A8A7D] flex flex-col items-center justify-center w-full h-full",
+      "item_inactive": "text-[#6B6B66] dark:text-[#A0A09F] flex flex-col items-center justify-center w-full h-full"
+    },
+    "pillar_tag": {
+      "classes": "inline-flex items-center px-2.5 py-0.5 rounded-[12px] text-[12px] font-medium border min-h-[24px]"
+    }
+  },
+  "motion": {
+    "philosophy": "No animations except subtle transitions for state changes (hover, focus, active).",
+    "classes": "transition-all duration-200 ease-in-out"
+  },
+  "icons": {
+    "library": "lucide-react",
+    "size": "24",
+    "stroke_width": "2",
+    "mapping": {
+      "Journal": "BookOpen",
+      "Progress": "TrendingUp",
+      "Review": "RefreshCw",
+      "SOPs": "FileText",
+      "Vision": "Compass"
+    }
+  },
+  "testing": {
+    "requirements": "All interactive and key informational elements MUST include a data-testid attribute. Use kebab-case, role-based naming (e.g., data-testid='journal-submit-button')."
+  },
+  "instructions_to_main_agent": [
+    "Build a mobile-first responsive layout suitable for mobile browsers or PWA.",
+    "Implement the Bottom Navigation bar globally, fixing it to the bottom with 56px height.",
+    "Ensure all touch targets (buttons, inputs, clickable icons) are at least 44x44px.",
+    "Use system fonts exactly as specified. Do not import external fonts like Inter or Roboto.",
+    "For the Journal HOME screen, structure 5 text fields with auto-save utilizing localforage/IndexedDB.",
+    "Implement the Pillar tags as toggleable chips with their respective hex colors.",
+    "Apply the color variables strictly. The app should feel calm, minimal, and academic.",
+    "Add data-testid to every interactive component for testing.",
+    "Use Recharts for the 4-week bar chart in the Progress module.",
+    "Ensure dark mode toggle works and maps exactly to the dark mode hex codes provided."
+  ]
+}
